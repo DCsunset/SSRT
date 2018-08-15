@@ -1,0 +1,47 @@
+<html>
+
+<body>
+    {% extends "base.html" %} 
+    {% block title %}首页{% endblock %} 
+    {% block index %} active {% endblock %}
+    {% block body %}
+        <div>
+            <nav class="navbar navbar-light bg-light">
+                <form>
+                    <!-- <button class="btn btn-outline-success" type="button">Main button</button> -->
+                    <button class="btn btn-outline-secondary" type="button">立项申请</button>
+                    <button class="btn btn-outline-secondary" type="button">学生报名</button>
+                    <button class="btn btn-outline-secondary" type="button">报名审核</button>
+                    <button class="btn btn-outline-secondary" type="button">项目结题</button>
+                    <button class="btn btn-outline-secondary" type="button">查看本人项目信息</button>
+                </form>
+            </nav>
+        </div>
+        <div class="col-sm-12">
+            <hr class="my-4">
+            <div>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">使用指南</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">系统通知</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <textarea class="form-control" rows="35" readonly="readonly">
+                
+            </textarea>
+        </div>
+    {% endblock %}
+
+</body>
+
+</html>

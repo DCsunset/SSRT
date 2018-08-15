@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">SSRT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item {% block index %}{% endblock %}">
+                    <a class="nav-link" href="#">首页 </a>
+                </li>
+                <li class="nav-item {% block current %}{% endblock %}">
+                    <a class="nav-link" href="#">当前项目</a>
+                </li>
+                <li class="nav-item {% block finished %}{% endblock %}">
+                    <a class="nav-link" href="#">结题项目</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <span>您好,{{user}}}</span>
+                <a class="quit" href="#">退出</a>
+                <a class="help" href="#">帮助</a>
+            </span>
+        </div>
+    </nav>
+    {% block body %}{% endblock %}
+</body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</html>
