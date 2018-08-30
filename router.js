@@ -2,6 +2,7 @@ const router = require('koa-router')();
 
 const index = async (ctx, next)=>{
     let title = 'index';
+    console.log("gg");
     await ctx.render('index',{
         title
     });
@@ -14,7 +15,7 @@ const login = async (ctx, next)=>{
     });
 }
 
-router.get('/index', index);
-router.get('/login', login);
+router.post('/index', index);
+router.post('/login', login);
 
 module.exports = router;
